@@ -1,0 +1,171 @@
+/* Row  */
+.row{
+    height: 500px;
+    width: 100%;
+    margin-top:10%;
+    border: solid black 1px;
+      background-color: rgb(248, 227, 34); 
+      /* used to avoid overflow of background (darkorchid) for all three boxes  */
+      overflow: hidden;
+      display: table;
+}
+/* first division in row box1 */
+.box1{
+    margin-top: 50px;
+    height: 400px;
+    margin-right: 4.165%;
+    border: black solid 1px;
+    position: relative;
+    /* used avoid overflow of background (darkorchid) out side the box */
+    overflow: hidden;
+    background:rgb(250, 244, 244);
+}
+/* second division in row box2 */
+.box2{
+    margin-top: 50px;
+    border: black solid 1px;
+    height: 400px;
+    margin-right: 4.165%;
+    position: relative;
+      /* used avoid overflow of background (darkorchid) out side the box */
+    overflow: hidden;
+    background:rgb(250, 244, 244);
+   
+}
+/* third division in row box3 */
+.box3{
+    margin-top: 50px;
+    border: solid black 1px;
+    height: 400px;
+    position: relative;
+      /* used avoid overflow of background (darkorchid) out side the box */
+    overflow: hidden;
+    background: rgb(250, 244, 244);;
+    margin-bottom: 50px;
+}
+/* content to give background color half of the box */
+.content{
+    width: 100%;
+    height: 50%;
+    background-color: darkorchid;
+    box-sizing: border-box;
+    /* used to incline background-color 20deg */
+    transform:skewY(-20deg) translateY(-70px);
+    position: absolute;
+    overflow: hidden;
+}
+/* heading of the all boxes */
+h1{
+    margin: 8px 10px;
+    transform: skewY(20deg) translateY(75px);
+    color: white;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+/* Hexagon css properties */
+.hexagon{
+    width: 100px;
+    height: 50px;
+    position: relative;
+    margin-left: 35%;
+    margin-top: 25%;
+    background-color:rgb(241, 234, 234);
+}
+ .hexagon::before{
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 25px solid rgb(241, 234, 234);
+}
+.hexagon::after{
+content: '';
+position: absolute;
+bottom:-25px;
+left: 0;
+width: 0;
+height: 0px;
+border-left: 50px solid transparent;
+border-right: 50px solid transparent;
+border-top: 25px solid rgb(241, 234, 234);
+}
+/* Content inside all 3 boxes */
+.container{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 12px;
+    color: rgb(128, 128, 128);
+}
+/* Button */
+.button{
+    text-align: center;
+    margin-top: 40px;
+    font-size: 12px;
+}
+/* achor link of buttons */
+.button a{
+    text-decoration: none;
+    background-color: darkorchid;
+    padding: 10px 20px;
+    border-radius: 20px; 
+    color: white;
+}
+/* content inside the Hexagon */
+span{
+    margin-left: 20px;
+    font-size: 25px;
+    font-weight: 900;
+}
+/* inside hexagon */
+.month{
+    margin-left: 20px;
+}
+/* when curser hover on the boxes then each box will emphasize */
+.box1:hover{
+    transform: scale(1.05);
+}
+.box2:hover{
+    transform: scale(1.05);
+}
+.box3:hover{
+    transform: scale(1.05);
+}
+/* to give margin from both side to the 3 boxes(row) at a time  */
+.main-container{
+    margin-left: 7.33%;
+    margin-right:8.33%;
+}
+/* media query for medium device */
+    @media only screen and (max-width:900px){
+        .hexagon{
+            width: 100px;
+            height: 40px;
+            font-size: 10px;
+            margin-top: 34%;
+            margin-left: 32%;
+        }
+        h1{
+            font-size: 15px;
+            margin-left: 8.33%;
+        }
+    }
+/* Media query for small device (mobile phone) */
+         @media only screen and (min-width:500px){
+             .box1{
+                 float: left;
+                 width: 30%;
+             }
+             .box2{
+                 float: left;
+                 width: 30%;
+             }
+             .box3{
+                 float: right;
+                 width: 30%;
+             }
+            }
